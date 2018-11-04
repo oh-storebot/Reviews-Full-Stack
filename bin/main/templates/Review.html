@@ -7,10 +7,13 @@
 <body>
 	<h1>A single review</h1>
 	
-	<div th:each = "review: ${reviews}"><!-- for each Review in the reviews collection -->
-		<p th:text = "${review.name}"></p>
+	
 		<p th:text = "${review.description}"></p>
+		<p th:text = "${review.category.name}"></p>
 		<a href="http://localhost:8080/show-reviews">Back to home</a>
-	</div>
+
+	
 </body>
 </html>
+
+<!-- <div th:each = "review: ${reviews}"><!-- for each Review in the reviews collection --> 
