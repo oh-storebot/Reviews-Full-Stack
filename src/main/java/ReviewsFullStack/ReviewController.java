@@ -24,15 +24,15 @@ public class ReviewController {
 		
 		if(category.isPresent()) {
 			model.addAttribute("category", category.get());
-			return "Categories"; /*HTML file referenced */
+			return "Category"; /*HTML file referenced */
 		}
 		throw new ClassNotFoundException(); /*Spring to handle. reacts to the http status code*/
 	}
 
-	@RequestMapping("/show-categories")
-	public String findAllCourses(Model model) {
+	@RequestMapping("/categories")
+	public String findAllCategories(Model model) {
 
-		model.addAttribute("courses", categoryRepo.findAll()); /*findAll is picking up everything*/
+		model.addAttribute("categories", categoryRepo.findAll()); /*findAll is picking up everything*/
 		return("Categories");
 	}
 	

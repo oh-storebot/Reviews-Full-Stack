@@ -16,13 +16,13 @@ public class ReviewsPopulator implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		Category category = new Category("Test category");
+		Category category = new Category("Chicken");
 		category = categoryRepo.save(category);
-		reviewRepo.save(new Review("This is a test review", category));
+		reviewRepo.save(new Review("The fried chicken was delicious", category));
 		
-		Category categoryTwo = new Category("Test category Two");
+		Category categoryTwo = new Category("Fish");
 		categoryTwo = categoryRepo.save(categoryTwo);
-		reviewRepo.save(new Review("This is a second test review", categoryTwo));
+		reviewRepo.save(new Review("The fish was a little fishy", categoryTwo));
 		
 	
 	}
